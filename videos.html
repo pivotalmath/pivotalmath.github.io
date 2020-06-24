@@ -13,19 +13,37 @@
     <body>
         <div class="wrapper">
             <h1>Videos</h1>
-            <div class="content">
-                <div class="left">
-                    <div id="add-sub-decimals">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/vwQxIgWQ-6c" 
-                        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-
-                <div class="right">
-                
+            <button class="accordion">Pre-Algebra</button>
+            <div class="panel">
+                <div id="add-sub-decimals">
+                    <iframe width="260" height="157" src="https://www.youtube.com/embed/vwQxIgWQ-6c" 
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <a class="homebutton" href=index.html>Return to home</a>
+                
+            <button class="accordion">Algebra</button>
+            <div class="panel">
+            <p>Coming soon</p>
+            </div>
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                    
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                          panel.style.display = "none";
+                        } else {
+                          panel.style.display = "block";
+                        }
+                      });
+                    }
+                </script>
         </div>
+        <a class="homebutton" href=index.html>Return to home</a>
     </body>
 </html>
