@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Videos</title>
-        <link rel="stylesheet" type="text/css" href="video_style.css">
+        <title>Documents</title>
+        <link rel="stylesheet" type="text/css" href="docs_style.css">
     </head>
 
     <header>
@@ -13,9 +13,34 @@
     <body>
         <div class="wrapper">
             <h1>Documents</h1>
-            <div class="content">
-                    <a id="David-HW" href="docs/David_Homework.pdf">David Homework</a>
+                  
+            <button class="accordion">Axel</button>
+            <div class="panel">
+                <a class="file-dl" id="Axel-challenge" href="docs/Challenge_problems_for_Axel.pdf">Axel Challenge Problems</a>
             </div>
+
+            <button class="accordion">David</button>
+            <div class="panel">
+                <a class="file-dl" id="David-HW" href="docs/David_Homework.pdf">David Homework #1</a>
+            </div>
+
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                    
+                for (i = 0; i < acc.length; i++) {
+                    acc[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var panel = this.nextElementSibling;
+                        if (panel.style.display === "block") {
+                          panel.style.display = "none";
+                        } else {
+                          panel.style.display = "block";
+                        }
+                      });
+                    }
+                </script>
+
             <a class="homebutton" href=index.html>Return to home</a>
     </body>
 </html>
