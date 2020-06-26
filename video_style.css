@@ -68,4 +68,6 @@ html, body {
   div > iframe {
     margin: 15px 15px;
     box-shadow: 4px 4px 4px darkgrey;
+    width: 45%;
+    height: 250px;
   }
